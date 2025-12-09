@@ -52,6 +52,8 @@ Flyway migrations.
   PUT      `/api/employees/{id}`   Update existing employee
   DELETE   `/api/employees/{id}`   Delete employee by ID
 
+------------------------------------------------------------------------
+
 ### Employment Package Management
 
   -------------------------------------------------------------------------------
@@ -71,6 +73,8 @@ Flyway migrations.
   PUT                `/api/packages/package/{id}`   Update a package
 
   DELETE             `/api/packages/package/{id}`   Delete a package
+  -------------------------------------------------------------------------------
+
   -------------------------------------------------------------------------------
 
 ## How to Run the Project Locally
