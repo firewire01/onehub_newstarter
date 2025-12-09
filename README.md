@@ -49,3 +49,14 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/firewire01/onehub_newstarter.git
 cd onehub_newstarter
+
+
+### Dependencies
+
+- **This project includes several key dependencies:
+- **Spring Boot for building the application.
+- **Flyway for managing database migrations.
+- **Spring Data JPA for interacting with the database.
+- **MapStruct for DTO to entity mapping.
+- **Swagger (Springdoc OpenAPI) for API documentation and testing.
+- **JUnit 5 for unit testing.
