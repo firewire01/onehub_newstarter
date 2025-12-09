@@ -16,7 +16,7 @@ public interface EmployeePackageAssignmentMapper {
 
     EmploymentPackage employeePackageToEntity(EmploymentPackageDTO packageDTO);
 
-    EmploymentPackageDTO employeePackageToDto(EmploymentPackage packageDTO);
+    EmploymentPackageDTO employeePackageToDto(EmploymentPackage employmentPackage);
 
     @Mapping(target = "id", ignore = true)
     void updateEmployeePackage(EmploymentPackageDTO dto, @MappingTarget EmploymentPackage employee);
