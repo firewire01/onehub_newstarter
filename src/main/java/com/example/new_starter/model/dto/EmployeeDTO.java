@@ -22,10 +22,10 @@ import java.time.LocalDateTime;
 @Builder
 public class EmployeeDTO {
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String employeeNo;
 
     private String title;
@@ -42,16 +42,16 @@ public class EmployeeDTO {
 
     private LocalDate startDate;
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private LocalDateTime createdAt;
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String createdBy;
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private LocalDateTime updatedAt;
 
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String updatedBy;
 
     @Email
@@ -60,34 +60,4 @@ public class EmployeeDTO {
 
     @Valid
     private AddressDTO address;
-
-    @JsonProperty
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    @JsonProperty
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    @JsonProperty
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    @JsonProperty
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    @JsonProperty
-    public Long getId() {
-        return id;
-    }
-
-    @JsonProperty
-    public String getEmployeeNo() {
-        return employeeNo;
-    }
 }

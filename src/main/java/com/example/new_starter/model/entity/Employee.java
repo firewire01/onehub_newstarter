@@ -48,8 +48,11 @@ public class Employee {
     // Created timestamp (set on creation)
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
+    @Setter(AccessLevel.NONE)
     private LocalDateTime createdAt;
 
+    @Column(name = "created_by", updatable = false)
+    @Setter(AccessLevel.NONE)
     private String createdBy;
 
     // Updated timestamp (set on update)
@@ -74,16 +77,17 @@ public class Employee {
         }
 
         this.setUpdatedAt(LocalDateTime.now());// Fallback in case @LastModifiedDate fails
-        this.createdBy = getCurrentUser();  // Set the user who created the record
+
+        if (this.createdBy == null)
+            this.createdBy = getCurrentUser();  // Set the user who created the record
+
         this.updatedBy = getCurrentUser();
     }
 
     @PreUpdate
     public void preUpdate() {
-        if (this.updatedAt == null) {
-            this.updatedAt = LocalDateTime.now();  // Fallback if @LastModifiedDate fails
-        }
-        this.updatedBy = getCurrentUser();  // Set the user who updated the record
+        this.updatedAt = LocalDateTime.now();
+        this.updatedBy = getCurrentUser();// Set the user who updated the record
     }
 
     private String getCurrentUser() {
