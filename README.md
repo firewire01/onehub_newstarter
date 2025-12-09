@@ -55,22 +55,22 @@ cd onehub_newstarter
 ### Project Structure
 
 Here’s a breakdown of the project structure:
-- **com.example.newstarter:
-- ***Main application class and configuration files.
-- **com.example.newstarter.controller:
-- ***REST controllers for handling employee and package management endpoints.
-- **com.example.newstarter.model:
-- ***Domain models such as Employee, Package.
-- **com.example.newstarter.dto:
-- ***Data Transfer Objects (DTOs) for communication between client and server.
-- **com.example.newstarter.repository:
-- ***JPA repositories for CRUD operations.
-- **com.example.newstarter.service:
-- ***Service layer for business logic.
-- **com.example.newstarter.exception:
-- ***Global exception handling classes.
-- **com.example.newstarter.config:
-- ***Configuration for Swagger, Flyway, and other application settings.
+- **com.example.newstarter:**
+- ***Main application class and configuration files.***
+- **com.example.newstarter.controller:**
+- ***REST controllers for handling employee and package management endpoints.***
+- **com.example.newstarter.model:**
+- ***Domain models such as Employee, Package.***
+- **com.example.newstarter.dto:**
+- ***Data Transfer Objects (DTOs) for communication between client and server.***
+- **com.example.newstarter.repository:**
+- ***JPA repositories for CRUD operations.***
+- **com.example.newstarter.service:**
+- ***Service layer for business logic.***
+- **com.example.newstarter.exception:**
+- ***Global exception handling classes.***
+- **com.example.newstarter.config:**
+- ***Configuration for Swagger, Flyway, and other application settings.***
 
 ### Dependencies
 
